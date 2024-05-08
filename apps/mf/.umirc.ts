@@ -1,16 +1,5 @@
 import { defineConfig } from "umi";
 
-const shared = {
-  react: {
-    singleton: true,
-    eager: true,
-  },
-  "react-dom": {
-    singleton: true,
-    eager: true,
-  },
-};
-
 const moduleFederationName = "remoteComponent";
 
 export default defineConfig({
@@ -18,7 +7,6 @@ export default defineConfig({
   mf: {
     name: moduleFederationName,
     library: { type: "window", name: moduleFederationName },
-    shared,
   },
   mfsu: {
     strategy: "eager",

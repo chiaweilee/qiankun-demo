@@ -2,7 +2,7 @@
   "name": "mf-demo",
   "private": true,
   "scripts": {
-    "dev": "umi build && serve dist -l 3002",
+    "dev": "umi dev",
     "build": "umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
