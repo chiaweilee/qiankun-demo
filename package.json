@@ -3,7 +3,8 @@
   "scripts": {
     "build": "turbo run build",
     "test": "turbo run test",
-    "dev": "turbo run dev --parallel --no-cache"
+    "dev": "turbo run dev --parallel --no-cache",
+    "start": "turbo run dev --parallel --no-cache"
   },
   "devDependencies": {
     "turbo": "latest"

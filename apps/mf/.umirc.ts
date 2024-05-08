@@ -11,20 +11,17 @@ const shared = {
   },
 };
 
+const moduleFederationName = "remoteComponent";
+
 export default defineConfig({
   plugins: ["@umijs/plugins/dist/mf"],
-  routes: [
-    { path: "/", component: "index" },
-    { path: "/umi-demo", component: "demo" },
-  ],
   mf: {
-    name: 'hostSub',
-    remotes: [
-      {
-        name: "remoteComponent",
-        entry: "http://127.0.0.1:3002/remote.js",
-      },
-    ],
+    name: moduleFederationName,
+    library: { type: "window", name: moduleFederationName },
     shared,
   },
+  mfsu: {
+    strategy: "eager",
+  },
+  hash: false,
 });
