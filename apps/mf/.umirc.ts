@@ -8,8 +8,6 @@ export default defineConfig({
     name: moduleFederationName,
     library: { type: "window", name: moduleFederationName },
   },
-  mfsu: {
-    strategy: "eager",
-  },
+  mfsu: false,
   hash: false,
 });
